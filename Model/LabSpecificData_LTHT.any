@@ -1,0 +1,63 @@
+Main.ModelSetup.LabSpecificData = 
+{
+  Gravity = -9.81*{0,0,1};
+
+
+ ///////      MOCAP MARKER AND FORCEPLATE SETUP      //////
+ //  This defines the files that define the markers and  //
+ //  auxiliary drivers, and the path to the C3D files.   //
+ #path MOCAP_C3D_DATA_PATH "<LLJ_C3D_FILES_PATH>"
+ #path MOCAP_C3DSETTINGS "C3DSettings.any"
+ 
+ #path MOCAP_EXTRA_DRIVERS_FILE "ExtraDrivers_LTHT.any"
+ #path MOCAP_MARKER_PROTOCOL_FILE "MarkerProtocol_LTHT.any"
+ #path MOCAP_FORCE_PLATE_FILE "ForcePlates_LTHT.any"
+
+ 
+ ///////      MOCAP BODYMODEL CONFIGURATION        ///////     
+ #path BODY_MODEL_CONFIG_FILE "BodyModelConfig_LTHT.any"
+
+
+ #ifndef MOCAP_OUTPUT_FILENAME_PREFIX 
+ #define MOCAP_OUTPUT_FILENAME_PREFIX Main.ModelSetup.SubjectSpecificData.SubjectID + "_"
+ #endif
+
+ #ifndef _INCLUDE_UPPER_BODY_
+ #define _INCLUDE_UPPER_BODY_ OFF
+ #endif
+
+ #ifdef _STANDING_REFERENCE_
+ // Anthropometric optimizations on standing reference trials
+ OptimizeAnthropometricsOnOff OptimizeAntropometricsOnOff (
+   PELVIS_WIDTH = ON , 
+   HEAD_HEIGHT = OFF, 
+   TRUNK_HEIGHT= ON, 
+   RIGHT_THIGH_LENGTH= ON, 
+   LEFT_THIGH_LENGTH = ON,
+   RIGHT_SHANK_LENGTH= ON, 
+   LEFT_SHANK_LENGTH = ON,
+   RIGHT_FOOT_LENGTH= ON, 
+   LEFT_FOOT_LENGTH = ON,
+   RIGHT_UPPERARM_LENGTH= _INCLUDE_UPPER_BODY_, 
+   LEFT_UPPERARM_LENGTH = _INCLUDE_UPPER_BODY_,
+   RIGHT_LOWERARM_LENGTH= _INCLUDE_UPPER_BODY_, 
+   LEFT_LOWERARM_LENGTH = _INCLUDE_UPPER_BODY_,
+   RIGHT_HAND_LENGTH= OFF, 
+   LEFT_HAND_LENGTH = OFF,
+   LEFT_RIGHT_SYMMETRY = ON
+ ) ={};
+#endif
+
+ Main.Studies.InverseDynamicStudy = 
+ {
+   
+  InverseDynamics.Criterion.UpperBoundOnOff = Off;
+   
+   #ifpathexists LLJ_RESEARCH_SUPPORT
+     #include "<LLJ_RESEARCH_SUPPORT>/Outputs.any"
+   #endif
+ 
+
+ };
+ 
+};

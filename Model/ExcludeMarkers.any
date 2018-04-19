@@ -1,0 +1,533 @@
+// This exclude markers again if EXCLUDE_XXX is defined...
+  
+#ifdef  _RFHD
+  #ifdef  EXCLUDE_RFHD
+  #undef  _RFHD
+  #endif
+#endif
+
+#ifdef  _LFHD
+  #ifdef  EXCLUDE_LFHD
+  #undef  _LFHD
+  #endif
+#endif
+
+#ifdef  _RBHD
+  #ifdef  EXCLUDE_RBHD
+  #undef  _RBHD
+  #endif
+#endif
+
+#ifdef  _LBHD
+  #ifdef  EXCLUDE_LBHD
+  #undef  _LBHD
+  #endif
+#endif
+
+#ifdef  _L_PEL_U
+  #ifdef  EXCLUDE_L_PEL_U
+  #undef  _L_PEL_U
+  #endif
+#endif
+
+#ifdef  _L_PEL_L
+  #ifdef  EXCLUDE_L_PEL_L
+  #undef  _L_PEL_L
+  #endif
+#endif
+
+#ifdef  _R_PEL_L
+  #ifdef  EXCLUDE_R_PEL_L
+  #undef  _R_PEL_L
+  #endif
+#endif
+
+#ifdef  _R_PEL_U
+  #ifdef  EXCLUDE_R_PEL_U
+  #undef  _R_PEL_U
+  #endif
+#endif
+
+#ifdef  _RM2
+  #ifdef  EXCLUDE_RM2
+  #undef  _RM2
+  #endif
+#endif
+
+#ifdef  _LM2
+  #ifdef  EXCLUDE_LM2
+  #undef  _LM2
+  #endif
+#endif
+
+#ifdef  _RM5
+  #ifdef  EXCLUDE_RM5
+  #undef  _RM5
+  #endif
+#endif
+
+#ifdef  _LM5
+  #ifdef  EXCLUDE_LM5
+  #undef  _LM5
+  #endif
+#endif
+
+#ifdef  _RAC
+  #ifdef  EXCLUDE_RAC
+  #undef  _RAC
+  #endif
+#endif
+
+#ifdef  _LAC
+  #ifdef  EXCLUDE_LAC
+  #undef  _LAC
+  #endif
+#endif
+
+#ifdef  _R_CALC
+  #ifdef  EXCLUDE_R_CALC
+  #undef  _R_CALC
+  #endif
+#endif
+
+#ifdef  _L_CALC
+  #ifdef  EXCLUDE_L_CALC
+  #undef  _L_CALC
+  #endif
+#endif
+
+#ifdef  _RMT1
+  #ifdef  EXCLUDE_RMT1
+  #undef  _RMT1
+  #endif
+#endif
+
+#ifdef  _LMT1
+  #ifdef  EXCLUDE_LMT1
+  #undef  _LMT1
+  #endif
+#endif
+
+#ifdef  _RMT5
+  #ifdef  EXCLUDE_RMT5
+  #undef  _RMT5
+  #endif
+#endif
+
+#ifdef  _LMT5
+  #ifdef  EXCLUDE_LMT5
+  #undef  _LMT5
+  #endif
+#endif
+
+#ifdef  _RMT2
+  #ifdef  EXCLUDE_RMT2
+  #undef  _RMT2
+  #endif
+#endif
+
+#ifdef  _LMT2
+  #ifdef  EXCLUDE_LMT2
+  #undef  _LMT2
+  #endif
+#endif
+
+#ifdef  _STRN
+  #ifdef  EXCLUDE_STRN
+  #undef  _STRN
+  #endif
+#endif
+
+#ifdef  _CLAV
+  #ifdef  EXCLUDE_CLAV
+  #undef  _CLAV
+  #endif
+#endif
+
+#ifdef  _T10
+  #ifdef  EXCLUDE_T10
+  #undef  _T10
+  #endif
+#endif
+
+#ifdef  _C7
+  #ifdef  EXCLUDE_C7
+  #undef  _C7
+  #endif
+#endif
+
+#ifdef  _R_THI_1
+  #ifdef  EXCLUDE_R_THI_1
+  #undef  _R_THI_1
+  #endif
+#endif
+
+#ifdef  _R_THI_2
+  #ifdef  EXCLUDE_R_THI_2
+  #undef  _R_THI_2
+  #endif
+#endif
+
+#ifdef  _R_THI_3
+  #ifdef  EXCLUDE_R_THI_3
+  #undef  _R_THI_3
+  #endif
+#endif
+
+#ifdef  _R_THI_4
+  #ifdef  EXCLUDE_R_THI_4
+  #undef  _R_THI_4
+  #endif
+#endif
+
+#ifdef  _L_THI_1
+  #ifdef  EXCLUDE_L_THI_1
+  #undef  _L_THI_1
+  #endif
+#endif
+
+#ifdef  _L_THI_2
+  #ifdef  EXCLUDE_L_THI_2
+  #undef  _L_THI_2
+  #endif
+#endif
+
+#ifdef  _L_THI_3
+  #ifdef  EXCLUDE_L_THI_3
+  #undef  _L_THI_3
+  #endif
+#endif
+
+#ifdef  _L_THI_4
+  #ifdef  EXCLUDE_L_THI_4
+  #undef  _L_THI_4
+  #endif
+#endif
+
+#ifdef  _R_LEG_1
+  #ifdef  EXCLUDE_R_LEG_1
+  #undef  _R_LEG_1
+  #endif
+#endif
+
+#ifdef  _R_LEG_2
+  #ifdef  EXCLUDE_R_LEG_2
+  #undef  _R_LEG_2
+  #endif
+#endif
+
+#ifdef  _R_LEG_3
+  #ifdef  EXCLUDE_R_LEG_3
+  #undef  _R_LEG_3
+  #endif
+#endif
+
+#ifdef  _R_LEG_4
+  #ifdef  EXCLUDE_R_LEG_4
+  #undef  _R_LEG_4
+  #endif
+#endif
+
+#ifdef  _L_LEG_1
+  #ifdef  EXCLUDE_L_LEG_1
+  #undef  _L_LEG_1
+  #endif
+#endif
+
+#ifdef  _L_LEG_2
+  #ifdef  EXCLUDE_L_LEG_2
+  #undef  _L_LEG_2
+  #endif
+#endif
+
+#ifdef  _L_LEG_3
+  #ifdef  EXCLUDE_L_LEG_3
+  #undef  _L_LEG_3
+  #endif
+#endif
+
+#ifdef  _L_LEG_4
+  #ifdef  EXCLUDE_L_LEG_4
+  #undef  _L_LEG_4
+  #endif
+#endif
+
+#ifdef  _RUARM1
+  #ifdef  EXCLUDE_RUARM1
+  #undef  _RUARM1
+  #endif
+#endif
+
+#ifdef  _RUARM2
+  #ifdef  EXCLUDE_RUARM2
+  #undef  _RUARM2
+  #endif
+#endif
+
+#ifdef  _RUARM3
+  #ifdef  EXCLUDE_RUARM3
+  #undef  _RUARM3
+  #endif
+#endif
+
+#ifdef  _RUARM4
+  #ifdef  EXCLUDE_RUARM4
+  #undef  _RUARM4
+  #endif
+#endif
+
+#ifdef  _LUARM1
+  #ifdef  EXCLUDE_LUARM1
+  #undef  _LUARM1
+  #endif
+#endif
+
+#ifdef  _LUARM2
+  #ifdef  EXCLUDE_LUARM2
+  #undef  _LUARM2
+  #endif
+#endif
+
+#ifdef  _LUARM3
+  #ifdef  EXCLUDE_LUARM3
+  #undef  _LUARM3
+  #endif
+#endif
+
+#ifdef  _LUARM4
+  #ifdef  EXCLUDE_LUARM4
+  #undef  _LUARM4
+  #endif
+#endif
+
+#ifdef  _RLARM1
+  #ifdef  EXCLUDE_RLARM1
+  #undef  _RLARM1
+  #endif
+#endif
+
+#ifdef  _RLARM2
+  #ifdef  EXCLUDE_RLARM2
+  #undef  _RLARM2
+  #endif
+#endif
+
+#ifdef  _RLARM3
+  #ifdef  EXCLUDE_RLARM3
+  #undef  _RLARM3
+  #endif
+#endif
+
+#ifdef  _RLARM4
+  #ifdef  EXCLUDE_RLARM4
+  #undef  _RLARM4
+  #endif
+#endif
+
+#ifdef  _LLARM1
+  #ifdef  EXCLUDE_LLARM1
+  #undef  _LLARM1
+  #endif
+#endif
+
+#ifdef  _LLARM2
+  #ifdef  EXCLUDE_LLARM2
+  #undef  _LLARM2
+  #endif
+#endif
+
+#ifdef  _LLARM3
+  #ifdef  EXCLUDE_LLARM3
+  #undef  _LLARM3
+  #endif
+#endif
+
+#ifdef  _LLARM4
+  #ifdef  EXCLUDE_LLARM4
+  #undef  _LLARM4
+  #endif
+#endif
+
+#ifdef  _LPSIS
+  #ifdef  EXCLUDE_LPSIS
+  #undef  _LPSIS
+  #endif
+#endif
+
+#ifdef  _RPSIS
+  #ifdef  EXCLUDE_RPSIS
+  #undef  _RPSIS
+  #endif
+#endif
+
+#ifdef  _RASIS
+  #ifdef  EXCLUDE_RASIS
+  #undef  _RASIS
+  #endif
+#endif
+
+#ifdef  _LASIS
+  #ifdef  EXCLUDE_LASIS
+  #undef  _LASIS
+  #endif
+#endif
+
+#ifdef  _R_LKNEE
+  #ifdef  EXCLUDE_R_LKNEE
+  #undef  _R_LKNEE
+  #endif
+#endif
+
+#ifdef  _L_LKNEE
+  #ifdef  EXCLUDE_L_LKNEE
+  #undef  _L_LKNEE
+  #endif
+#endif
+
+#ifdef  _R_MKNEE
+  #ifdef  EXCLUDE_R_MKNEE
+  #undef  _R_MKNEE
+  #endif
+#endif
+
+#ifdef  _L_MKNEE
+  #ifdef  EXCLUDE_L_MKNEE
+  #undef  _L_MKNEE
+  #endif
+#endif
+
+#ifdef  _R_LMAL
+  #ifdef  EXCLUDE_R_LMAL
+  #undef  _R_LMAL
+  #endif
+#endif
+
+#ifdef  _L_LMAL
+  #ifdef  EXCLUDE_L_LMAL
+  #undef  _L_LMAL
+  #endif
+#endif
+
+#ifdef  _R_MMAL
+  #ifdef  EXCLUDE_R_MMAL
+  #undef  _R_MMAL
+  #endif
+#endif
+
+#ifdef  _L_MMAL
+  #ifdef  EXCLUDE_L_MMAL
+  #undef  _L_MMAL
+  #endif
+#endif
+
+#ifdef  _RSHO
+  #ifdef  EXCLUDE_RSHO
+  #undef  _RSHO
+  #endif
+#endif
+
+#ifdef  _LSHO
+  #ifdef  EXCLUDE_LSHO
+  #undef  _LSHO
+  #endif
+#endif
+
+#ifdef  _RLELB
+  #ifdef  EXCLUDE_RLELB
+  #undef  _RLELB
+  #endif
+#endif
+
+#ifdef  _LLELB
+  #ifdef  EXCLUDE_LLELB
+  #undef  _LLELB
+  #endif
+#endif
+
+#ifdef  _RMELB
+  #ifdef  EXCLUDE_RMELB
+  #undef  _RMELB
+  #endif
+#endif
+
+#ifdef  _LMELB
+  #ifdef  EXCLUDE_LMELB
+  #undef  _LMELB
+  #endif
+#endif
+
+#ifdef  _RRSP
+  #ifdef  EXCLUDE_RRSP
+  #undef  _RRSP
+  #endif
+#endif
+
+#ifdef  _LRSP
+  #ifdef  EXCLUDE_LRSP
+  #undef  _LRSP
+  #endif
+#endif
+
+#ifdef  _RUSP
+  #ifdef  EXCLUDE_RUSP
+  #undef  _RUSP
+  #endif
+#endif
+
+#ifdef  _LUSP
+  #ifdef  EXCLUDE_LUSP
+  #undef  _LUSP
+  #endif
+#endif
+
+#ifdef  _R_GTROC
+  #ifdef  EXCLUDE_R_GTROC
+  #undef  _R_GTROC
+  #endif
+#endif
+
+#ifdef  _L_GTROC
+  #ifdef  EXCLUDE_R_GTROC
+  #undef  _L_GTROC
+  #endif
+#endif
+
+#ifdef  _ForeHeadSymmetryConstraint
+  #ifdef  EXCLUDE_ForeHeadSymmetryConstraint
+  #undef  _ForeHeadSymmetryConstraint
+  #endif
+#endif
+
+#ifdef  _BackHeadSymmetryConstraint
+  #ifdef  EXCLUDE_BackHeadSymmetryConstraint
+  #undef  _BackHeadSymmetryConstraint
+  #endif
+#endif
+
+#ifdef  _RKneeMarkerSymmetryConstraint
+  #ifdef  EXCLUDE_RKneeMarkerSymmetryConstraint
+  #undef  _RKneeMarkerSymmetryConstraint
+  #endif
+#endif
+
+#ifdef  _LKneeMarkerSymmetryConstraint
+  #ifdef  EXCLUDE_LKneeMarkerSymmetryConstraint
+  #undef  _LKneeMarkerSymmetryConstraint
+  #endif
+#endif
+
+
+/* 
+Python code to generate this:
+labels = ['_RFHD', '_LFHD', '_RBHD', '_LBHD', '_L_PEL_U', '_L_PEL_L', '_R_PEL_L', '_R_PEL_U', '_RM2', '_LM2', '_RM5', '_LM5', '_RAC', '_LAC', '_R_CALC', '_L_CALC', '_RMT1', '_LMT1', '_RMT5', '_LMT5', '_RMT2', '_LMT2', '_STRN', '_CLAV', '_T10', '_C7', '_R_THI_1', '_R_THI_2', '_R_THI_3', '_R_THI_4', '_L_THI_1', '_L_THI_2', '_L_THI_3', '_L_THI_4', '_R_LEG_1', '_R_LEG_2', '_R_LEG_3', '_R_LEG_4', '_L_LEG_1', '_L_LEG_2', '_L_LEG_3', '_L_LEG_4', '_RUARM1', '_RUARM2', '_RUARM3', '_RUARM4', '_LUARM1', '_LUARM2', '_LUARM3', '_LUARM4', '_RLARM1', '_RLARM2', '_RLARM3', '_RLARM4', '_LLARM1', '_LLARM2', '_LLARM3', '_LLARM4', '_LPSIS', '_RPSIS', '_RASIS', '_LASIS', '_R_LKNEE', '_L_LKNEE', '_R_MKNEE', '_L_MKNEE', '_R_LMAL', '_L_LMAL', '_R_MMAL', '_L_MMAL', '_RSHO', '_LSHO', '_RLELB', '_LLELB', '_RMELB', '_LMELB', '_RRSP', '_LRSP', '_RUSP', '_LUSP', '_ForeHeadSymmetryConstraint', '_BackHeadSymmetryConstraint', '_RKneeMarkerSymmetryConstraint', '_LKneeMarkerSymmetryConstraint']
+for l in labels:
+    print('#ifdef ', l)
+    print('  #ifdef ','EXCLUDE'+l)
+    print('  #undef ',l)
+    print('  #endif')
+    print('#endif')
+    print('')
+
+
+
+/*

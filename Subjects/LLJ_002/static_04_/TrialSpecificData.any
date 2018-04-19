@@ -1,0 +1,82 @@
+Main.ModelSetup.TrialSpecificData = {
+
+  // This is a application specific flag for 
+  // using special setting for the standing
+  // reference recordings. 
+  #define TRIAL_TYPE "static"
+
+
+  #define _STANDING_REFERENCE_
+
+  #define EXCLUDE_R_CALC
+
+
+  /// This is the name of the trial c3d file without extension
+  TrialFileName = ANYBODY_NAME_MAINFILEDIR;
+
+
+  /// The static trials only use the first frame of the c3d file 
+  FirstFrame = .C3DFileData.Header.FirstFrameNo;
+  LastFrame = .C3DFileData.Header.FirstFrameNo;
+
+
+  // This class_template calculates the load time position and orientation of 
+  // the pelvis based on markers. It sets the PelvisPosX/Y/Z and PelvisRotZ/Y/X  
+  // in Main.HumanModel.Mannequin.Posture 
+  AutoPelvisPos AutoPos(RASIS=RASIS, LASIS=LASIS, BACK=RPSIS) = { };
+
+
+  /// The following settings define the initial posture of the
+  /// model (e.g. at load time)
+  Main.HumanModel.Mannequin.Posture = {
+
+  PelvisThoraxExtension = 0;
+  PelvisThoraxLateralBending = 0;
+  PelvisThoraxRotation = 0;
+
+  NeckExtension = 0;
+  NeckLateralBending = 0;
+  NeckRotation = 0;
+
+  Right = {
+    
+    HipFlexion = 0;
+    HipAbduction = 0;
+    HipExternalRotation = 0;
+    KneeFlexion = 0;
+    AnklePlantarFlexion = 0;
+    SubTalarEversion = 0;
+    
+    GlenohumeralFlexion = 0;
+    GlenohumeralAbduction = 80;
+    GlenohumeralExternalRotation = 45;
+    ElbowFlexion = 15;
+    ElbowPronation = 55;
+    WristFlexion = 0;
+    WristAbduction = 0;
+    
+  };
+  Left = {
+    
+    HipFlexion = 0;
+    HipAbduction = 0;
+    HipExternalRotation = 0;
+    KneeFlexion = 0;
+    AnklePlantarFlexion = 0;
+    SubTalarEversion = 0;
+    
+    GlenohumeralFlexion = 0;
+    GlenohumeralAbduction = 80;
+    GlenohumeralExternalRotation = 45;
+    ElbowFlexion = 15;
+    ElbowPronation = 55;
+    WristFlexion = 0;
+    WristAbduction = 0;
+    
+  };
+
+
+
+
+  }; // InitialPositionOfBody
+};

@@ -1,0 +1,34 @@
+#ifndef LLJ_LEEDS_MODEL_LIBDEF_ANY
+#define LLJ_LEEDS_MODEL_LIBDEF_ANY
+
+#path ANYBODY_PATH_OUTPUT "Output"
+#path TEMP_PATH "Output/tmp"
+#path BASE_MODEL "Model/"
+
+
+#ifpathexists "../libdef.any"
+#include "../libdef.any"
+#else
+#include "<ANYBODY_PATH_INSTALLDIR>/AMMR/libdef.any"
+#endif
+
+
+// Path for files specific to the LLJ hip loads research projects
+// The model can still work even though this path doesn't exist.
+#path LLJ_RESEARCH_SUPPORT "../llj-leeds-model-support"
+
+
+#ifpathexists LLJ_RESEARCH_SUPPORT
+#include "<LLJ_RESEARCH_SUPPORT>/classtemplates.any"
+#endif
+
+
+#ifpathexists "../LLJ-Data/"
+#path LLJ_C3D_FILES_PATH "../LLJ-Data/patient_data"
+#else
+#path LLJ_C3D_FILES_PATH "C3D-files"
+#endif
+
+
+#endif
+

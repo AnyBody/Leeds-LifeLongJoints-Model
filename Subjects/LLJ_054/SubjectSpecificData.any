@@ -1,0 +1,48 @@
+
+Main.ModelSetup.SubjectSpecificData = 
+{
+  #define LLJ_SUBJECT_ID LLJ_054
+  AnyStringVar SubjectID = "LLJ_054";
+};
+
+Main.HumanModel.Anthropometrics =
+{
+  BodyMass = 60.5;
+  BodyHeight = DesignVar(166.0/100);
+  
+  // These antrhopometric data will be used as initial guess for 
+  // the optimization alogorithm the optimization algoritm will
+  // allow changes to the segment lengths 
+  SegmentDimensions =
+  {
+    PelvisWidth = .BodyHeight * 0.105; ///< Distance between hip joints
+    HeadHeight = .BodyHeight * 0.075; ///< Height in neutral position from  C1HatNode to top of head
+    TrunkHeight = .BodyHeight * 0.38;
+    AnyVar NeckLength = .BodyHeight * 0.075;
+    AnyVar TrunkWidth = .BodyHeight * 0.18;
+  
+    Right = 
+    {
+        UpperArmLength = ..BodyHeight * 0.145;
+        LowerArmLength = ..BodyHeight * 0.15;
+        HandLength = ..BodyHeight * 0.12;
+        HandBreadth = DesignVar(0.085);
+        
+        ThighLength = ..BodyHeight * 0.22; 
+        ShankLength = ..BodyHeight * 0.21;
+        FootLength = ..BodyHeight * 0.11;              
+    };
+  
+    Left = 
+    {
+        UpperArmLength = ..BodyHeight * 0.145;
+        LowerArmLength = ..BodyHeight * 0.15;
+        HandLength = ..BodyHeight * 0.12;
+        HandBreadth = DesignVar(0.085);
+        
+        ThighLength = ..BodyHeight * 0.22; 
+        ShankLength = ..BodyHeight * 0.21;
+        FootLength = ..BodyHeight * 0.11;    
+    };
+  };
+};

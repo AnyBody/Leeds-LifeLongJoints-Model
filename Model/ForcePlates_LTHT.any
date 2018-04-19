@@ -1,0 +1,24 @@
+// Workaround until C3D objects handles files with 1 frame nicely.
+#ifndef EXCLUDE_FORCE_PLATES 
+
+  #ifdef USE_STAIR_FORCEPLATES
+  #include "ForcePlatesStairs_LTHT.any"
+  #else
+
+  ForcePlateAutoDetection Plate1 (
+  PLATE_NO=1,
+  FORCEPLATE_TYPE = 2,
+  VelThreshold = 2.2,
+  ALLOW_MULTI_LIMB_CONTACT = OFF
+  ) ={  };
+  
+  ForcePlateAutoDetection Plate2 (
+  PLATE_NO=2,
+  FORCEPLATE_TYPE = 2,
+  VelThreshold = 2.2,
+  ALLOW_MULTI_LIMB_CONTACT = OFF
+  ) = { }; 
+  #endif
+  
+#endif
+

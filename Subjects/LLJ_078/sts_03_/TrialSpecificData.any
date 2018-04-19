@@ -1,0 +1,108 @@
+Main.ModelSetup.TrialSpecificData = {
+
+  #define MarkerPos(label) Main.ModelSetup.C3DFileData.Points.Markers.label.PosInterpol(Main.ModelSetup.TrialSpecificData.tStart)  
+    
+  #define TRIAL_TYPE "sts"
+
+  LoadParametersFrom = { "static_01_" };
+
+  AnyStringVar TrialType = TRIAL_TYPE; 
+
+  #if TRIAL_TYPE == "descent" | TRIAL_TYPE == "ascent"
+    #define USE_STAIR_FORCEPLATES
+  #endif
+
+  #define EXCLUDE_LASIS
+
+#define EXCLUDE_C7
+
+  /// This is the name of the trial c3d file without extension
+  TrialFileName = ANYBODY_NAME_MAINFILEDIR;
+
+  /// This the C3D frame where the analysis starts 
+  FirstFrame = .C3DFileData.Header.FirstFrameNo;
+  /// This the C3D frame where the analysis ends 
+  LastFrame = .C3DFileData.Header.LastFrameNo;
+
+
+
+  tStart = max({ (FirstFrame+1)/.C3DFileData.Header.VideoFrameRate,
+                 - 0.1 + min(Main.ModelSetup.C3DFileData.Groups.EVENT.TIMES.Data'[1])});
+  tEnd = min({ (LastFrame-1)/.C3DFileData.Header.VideoFrameRate,
+                  0.1 + max(Main.ModelSetup.C3DFileData.Groups.EVENT.TIMES.Data'[1])});
+
+  nStep = round((tEnd-tStart)*.C3DFileData.Header.VideoFrameRate);          
+  //nStep =  LastFrame - FirstFrame - 2;
+
+
+  
+  // This class_template calculates the load time position and orientation of 
+  // the pelvis based on markers. It sets the PelvisPosX/Y/Z and PelvisRotZ/Y/X  
+  // in Main.HumanModel.Mannequin.Posture 
+  AutoPelvisPos AutoPos(DIRECT_PELVIS_POS=ON) = {
+      #ifndef _PELVIS_POS
+        #define _PELVIS_POS 0.5*(MarkerPos(L_PEL_L) + MarkerPos(R_PEL_L)) + {0.1,0,0}*PelvisRotMat'
+      #endif
+      #ifndef _PELVIS_ROT 
+        #define _PELVIS_ROT RotMat(MarkerPos(R_PEL_L) ,MarkerPos(L_PEL_L), MarkerPos(R_PEL_U))  *  RotMat(-pi/2,y)
+      #endif
+      // Initial pelvis position and rotation.
+      PelvisPos = _PELVIS_POS;
+      PelvisRotMat = _PELVIS_ROT;
+  
+  };
+  
+  
+  
+  /// The following settings define the initial posture of the
+  /// model (e.g. at load time)
+  Main.HumanModel.Mannequin.Posture = {
+    
+  PelvisThoraxExtension = 0;
+  PelvisThoraxLateralBending = 0;
+  PelvisThoraxRotation = 0;
+
+  NeckExtension = 0;
+  NeckLateralBending = 0;
+  NeckRotation = 0;
+
+  Right = {
+    
+    HipFlexion = 0;
+    HipAbduction = 0;
+    HipExternalRotation = 0;
+    KneeFlexion = 20;
+    AnklePlantarFlexion = 0;
+    SubTalarEversion = 0;
+    
+    GlenohumeralFlexion = 0;
+    GlenohumeralAbduction = 10;
+    GlenohumeralExternalRotation = 0;
+    ElbowFlexion = 10;
+    ElbowPronation = 0;
+    WristFlexion = 0;
+    WristAbduction = 0;
+    
+  };
+  Left = {
+    
+    HipFlexion = 0;
+    HipAbduction = 0;
+    HipExternalRotation = 0;
+    KneeFlexion = 20;
+    AnklePlantarFlexion = 0;
+    SubTalarEversion = 0;
+    
+    GlenohumeralFlexion = 0;
+    GlenohumeralAbduction = 10;
+    GlenohumeralExternalRotation = 0;
+    ElbowFlexion = 10;
+    ElbowPronation = 0;
+    WristFlexion = 0;
+    WristAbduction = 0;
+    
+  };
+
+
+  }; // InitialPositionOfBody
+};
