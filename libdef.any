@@ -15,7 +15,7 @@
 
 // Path for files specific to the LLJ hip loads research projects
 // The model can still work even though this path doesn't exist.
-#path LLJ_RESEARCH_SUPPORT "../llj-leeds-model-support"
+#path LLJ_RESEARCH_SUPPORT "../Leeds-LifeLongJoints-Processing"
 
 
 #ifpathexists LLJ_RESEARCH_SUPPORT
