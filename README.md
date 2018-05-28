@@ -1,4 +1,6 @@
 # Leeds LifeLongJoints Model
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1254287.svg)](https://doi.org/10.5281/zenodo.1254287)
+
 
 This is the model used in an FP7 European Commission project called
 Lifelongjoints (https://lifelongjoints.eu/). The model was used to investigate
