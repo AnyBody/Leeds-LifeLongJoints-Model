@@ -7,7 +7,7 @@ Main.EnvironmentModel.GlobalRef = {
 #if _INCLUDE_UPPER_BODY_
   #define _STERNO_CLAVICULA_DRIVER
 #else
-  #define _HARD_NECK_DRIVER
+  #define BM_MANNEQUIN_DRIVER_NECK	ON
 #endif
 
 // These drivers are included in the standing reference trial
@@ -135,27 +135,10 @@ AnyKinEqSimpleDriver SkullGroundDriver={
 #endif
 
 
-#ifdef _HARD_NECK_DRIVER
-
-AnyKinEqSimpleDriver HardNeckDriver ={
-  AnyKinMeasureOrg &ref1 =Main.HumanModel.BodyModel.Interface.Trunk.SkullThoraxFlexion;
-  AnyKinMeasureOrg &ref2 =Main.HumanModel.BodyModel.Interface.Trunk.SkullThoraxLateralBending;
-  AnyKinMeasureOrg &ref3 =Main.HumanModel.BodyModel.Interface.Trunk.SkullThoraxRotation;
-  DriverPos = pi/180*{
-    .JntPos.NeckExtension,
-    .JntPos.NeckLateralBending,
-    .JntPos.NeckRotation
-  };
-  DriverVel = pi/180*{
-    .JntVel.NeckExtension,
-    .JntVel.NeckLateralBending,
-    .JntVel.NeckRotation
-  };
-  Reaction.Type={Off,Off,Off};
-};
 
 
-#endif
+
+
 
 
 #ifdef _STERNO_CLAVICULA_PROTRACTION_DRIVER
@@ -264,4 +247,7 @@ AnyKinEqSimpleDriver KneeFlexion={
   WeightFun = {&Weight.fun, &Weight.fun};
 };
 #endif
+
+
+AnyFolder& MannequinDriverRef = Main.HumanModel.DefaultMannequinDrivers;
 };
