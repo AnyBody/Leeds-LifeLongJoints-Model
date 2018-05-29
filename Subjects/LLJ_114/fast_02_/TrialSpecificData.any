@@ -12,16 +12,16 @@ Main.ModelSetup.TrialSpecificData = {
     #define USE_STAIR_FORCEPLATES
   #endif
 
-  #define EXCLUDE_L_THI_2
-
-#define EXCLUDE_R_PEL_U
-
-#define EXCLUDE_RMT5
-
-#define EXCLUDE_LASIS
-
-#define EXCLUDE_L_LEG_3
-
+  #define EXCLUDE_L_THI_2
+
+#define EXCLUDE_R_PEL_U
+
+#define EXCLUDE_RMT5
+
+#define EXCLUDE_LASIS
+
+#define EXCLUDE_L_LEG_3
+
 #define _PELVIS_ROT RotMat(MarkerPos(R_PEL_L) ,MarkerPos(L_PEL_L), MarkerPos(L_PEL_U)) * RotMat(-pi/2,y)
 
   /// This is the name of the trial c3d file without extension

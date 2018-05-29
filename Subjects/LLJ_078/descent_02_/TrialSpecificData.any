@@ -12,12 +12,12 @@ Main.ModelSetup.TrialSpecificData = {
     #define USE_STAIR_FORCEPLATES
   #endif
 
-  #define EXCLUDE_R_CALC
-
-#define EXCLUDE_LPSIS
-
-#define EXCLUDE_L_PEL_U
-
+  #define EXCLUDE_R_CALC
+
+#define EXCLUDE_LPSIS
+
+#define EXCLUDE_L_PEL_U
+
 #define EXCLUDE_L_CALC
 
   /// This is the name of the trial c3d file without extension

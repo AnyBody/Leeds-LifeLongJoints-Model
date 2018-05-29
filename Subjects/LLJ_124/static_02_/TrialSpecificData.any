@@ -8,8 +8,8 @@ Main.ModelSetup.TrialSpecificData = {
 
   #define _STANDING_REFERENCE_
 
-  #define EXCLUDE_STRN
-
+  #define EXCLUDE_STRN
+
 #define EXCLUDE_R_LEG_1
 
 
