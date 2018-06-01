@@ -17,6 +17,7 @@ Main.ModelSetup.LabSpecificData =
  ///////      MOCAP BODYMODEL CONFIGURATION        ///////     
  #path BODY_MODEL_CONFIG_FILE "BodyModelConfig_LTHT.any"
 
+ Main.Studies.MarkerTracking.Kinematics.KinematicTol = 1e-5;
 
  #ifndef MOCAP_OUTPUT_FILENAME_PREFIX 
  #define MOCAP_OUTPUT_FILENAME_PREFIX Main.ModelSetup.SubjectSpecificData.SubjectID + "_"

@@ -25,9 +25,19 @@ Main.EnvironmentModel.GlobalRef = {
    #endif
 #endif
 
+// Add very weak soft drivers for the upper body 
+// to help in the situations where markers are missing. 
 
-
-
+  #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_LATERAL_BENDING ON
+ 
+  #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_ROTATION	ON
+  #define BM_MANNEQUIN_DRIVER_PELVIS_THORAX_EXTENSION	ON
+  Main.HumanModel.DefaultMannequinDrivers = 
+  {
+    PostureDriverBending.WeakDriverWeight = 0.001;
+    PostureDriverRotation.WeakDriverWeight = 0.001;
+    PostureDriverExtension.WeakDriverWeight = 0.001; 
+  };
 
 AnyFolder ExtraDrivers = {
    AnyFolder &JntPos= Main.HumanModel.Mannequin.Posture;  

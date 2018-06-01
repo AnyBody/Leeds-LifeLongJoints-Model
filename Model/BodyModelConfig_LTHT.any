@@ -32,6 +32,41 @@ Main.Studies.InverseDynamicStudy =
    };
 };
 
+
+#ifndef SHOW_TRUNK
+  Main.HumanModel.BodyModel.Trunk.SegmentsThorax.ThoraxSeg.DrwSurf.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsThorax.SkullSeg.DrwSurf.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C7Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C6Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C5Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C4Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C3Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C2Seg.DrwSTL.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C1Seg.DrwSTL.Visible = Off;
+  
+  Main.HumanModel.BodyModel.Trunk.SegmentsThorax.SkullSeg.C1C0JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C1Seg.C1C0JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C2Seg.C2C1JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C3Seg.C3C2JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C4Seg.C4C3JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C5Seg.C5C4JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C6Seg.C6C5JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsCervicalSpine.C7Seg.C7C6JntNode.DrwNode.Visible = Off;
+  Main.HumanModel.BodyModel.Trunk.SegmentsThorax.ThoraxSeg.T1C7JntNode.DrwNode.Visible = Off;
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
 //#ifdef BM_LEG_MUSCLES_BOTH_HILL
 //#define BM_LEG_MUSCLES_BOTH _MUSCLES_3E_HILL_
 //#endif
