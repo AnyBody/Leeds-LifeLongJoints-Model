@@ -14,6 +14,8 @@ Main.ModelSetup.TrialSpecificData = {
 
   #define EXCLUDE_RASIS
 
+#define EXCLUDE_CLAV
+
   /// This is the name of the trial c3d file without extension
   TrialFileName = ANYBODY_NAME_MAINFILEDIR;
 
