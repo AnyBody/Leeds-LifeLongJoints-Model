@@ -15,7 +15,8 @@ Repository", and must be downloaded separately from this model.
 
 Data will be released periodically over the coming months/years. The first test release of data can be found here:
 
-Lunn, David and Chapman, Graham and Redmond, Anthony (2018) Motion analysis in total joint replacement patients: Data Release 1. University of Leeds. [Dataset] https://doi.org/10.5518/345
+    Lunn, David and Chapman, Graham and Redmond, Anthony (2018) Motion analysis in total joint replacement patients:
+    Data Release 1. University of Leeds. [Dataset](https://doi.org/10.5518/345)
 
 ## How to use the model:
 
