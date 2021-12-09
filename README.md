@@ -12,10 +12,12 @@ of activities of daily living. Note that, this model does not contain any
 patient data. The data is available directly from the "Research Data Leeds
 Repository", and must be downloaded separately from this model.
 
-Data will be released periodically over the coming months/years. The first test release of data can be found here:
+Data is released by University of Leeds: 
 
-    Lunn, David and Chapman, Graham and Redmond, Anthony (2018) Motion analysis in total joint replacement patients:
-    Data Release 1. University of Leeds. [Dataset](https://doi.org/10.5518/345)
+    Lunn, David and Chapman, Graham and Redmond, Anthony (2019) 
+    Motion analysis in total hip replacement patients. University of Leeds.
+    [Dataset] https://doi.org/10.5518/319
+
 
 ## How to use the model:
 
