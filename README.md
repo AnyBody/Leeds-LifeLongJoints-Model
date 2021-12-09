@@ -12,6 +12,10 @@ of activities of daily living. Note that, this model does not contain any
 patient data. The data is available directly from the "Research Data Leeds
 Repository", and must be downloaded separately from this model.
 
+> Note the model was built on the first test release of the dataset in 2018. 
+> The full dataset is now released and there can be small difference that means
+> the model needs to be updated.
+
 Data is released by University of Leeds: 
 
     Lunn, David and Chapman, Graham and Redmond, Anthony (2019) 
